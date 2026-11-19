@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Buying Power: Rates, Payments and Leverage in La Quinta and Palm Desert</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FBF8F3;--panel:#FFFFFF;--fg:#1E2A2E;--muted:#5F6B6E;--line:#E6DED2;--c0:#1F5C66;--c1:#C98B5B;--c2:#8FA9A3;--c3:#D9C2A7;--c4:#B07A8C;--grid:#EEE7DC;--ok:#2F7D5B;--bad:#B4483A;--pop:#FFFFFF}
+@media (prefers-color-scheme:dark){:root{--bg:#141B1D;--panel:#1C2528;--fg:#EEF1EF;--muted:#A3ADAD;--line:#2E3A3D;--c0:#5FB3BE;--c1:#E0A273;--c2:#7F9C96;--c3:#8C7660;--c4:#C58FA2;--grid:#263033;--ok:#5BC08F;--bad:#E07A6B;--pop:#1C2528}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:Inter,system-ui,sans-serif;font-size:15px;line-height:1.5}
+.wrap{max-width:1040px;margin:0 auto;padding:28px 20px 48px;display:flex;flex-direction:column;gap:40px}
+.brand{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.09em}
+h1{font-family:Fraunces,Georgia,serif;font-weight:400;font-size:clamp(30px,5.5vw,46px);line-height:1.08;margin:10px 0 0}
+.for{font-size:14px;color:var(--c0);font-weight:600;margin:12px 0 0}
+.lede{font-size:clamp(17px,2.2vw,20px);line-height:1.5;margin:14px 0 0;max-width:62ch}
+.lede b{font-weight:600}
+.meta{font-size:12px;color:var(--muted);margin:10px 0 0}
+h2{font-size:21px;font-weight:600;margin:0 0 4px}
+.sub{color:var(--muted);margin:0 0 16px;max-width:65ch}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px}
+.calc{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:20px}
+@media (max-width:760px){.calc{grid-template-columns:1fr}}
+.field{margin-bottom:16px}
+.field:last-child{margin-bottom:0}
+.flabel{display:flex;justify-content:space-between;align-items:baseline;font-size:13px;color:var(--muted);margin-bottom:6px}
+.flabel b{color:var(--fg);font-size:16px;font-weight:600;font-variant-numeric:tabular-nums}
+input[type=range]{width:100%;accent-color:var(--c0)}
+.seg{display:inline-flex;flex-wrap:wrap;border:1px solid var(--line);border-radius:999px;padding:3px;background:var(--bg)}
+.seg button{font:inherit;font-size:13px;border:0;background:transparent;color:var(--muted);padding:6px 13px;border-radius:999px;cursor:pointer}
+.seg button[aria-pressed=true]{background:var(--c0);color:#fff}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.num{display:flex;align-items:center;border:1px solid var(--line);border-radius:8px;background:var(--bg);padding:0 10px}
+.num span{color:var(--muted);font-size:14px}
+.num input{font:inherit;font-size:15px;color:var(--fg);background:transparent;border:0;padding:8px 6px;width:100%;font-variant-numeric:tabular-nums;outline:none}
+details.more summary{cursor:pointer;font-size:13px;color:var(--c0);font-weight:500;margin:4px 0 10px}
+.total{font-family:Fraunces,Georgia,serif;font-size:clamp(40px,7vw,56px);line-height:1;font-variant-numeric:tabular-nums}
+.tsub{color:var(--muted);font-size:13px;margin-top:6px}
+.stack{display:flex;height:16px;border-radius:999px;overflow:hidden;margin:18px 0 12px;background:var(--grid)}
+.stack div{height:100%}
+.legend{display:flex;flex-direction:column;gap:6px;font-size:14px;font-variant-numeric:tabular-nums}
+.legend .li{display:flex;justify-content:space-between;gap:10px;border-top:1px solid var(--line);padding-top:6px}
+.legend .li span:first-child{display:flex;align-items:center;gap:8px;color:var(--muted)}
+.sw{width:10px;height:10px;border-radius:3px;display:inline-block}
+.cash{margin-top:14px;font-size:13px;color:var(--muted)}
+.cash b{color:var(--fg)}
+.cmp{display:flex;flex-direction:column;gap:10px}
+.cmp .r{display:grid;grid-template-columns:minmax(150px,220px) 1fr minmax(120px,auto);gap:12px;align-items:center;font-variant-numeric:tabular-nums}
+@media (max-width:620px){.cmp .r{grid-template-columns:1fr auto}.cmp .bar{grid-column:1 / -1;order:3}}
+.cmp .lab{font-size:14px}
+.cmp .lab small{display:block;color:var(--muted);font-size:12px}
+.cmp .bar{height:14px;background:var(--grid);border-radius:999px;overflow:hidden}
+.cmp .bar div{height:100%;border-radius:999px;background:var(--c2)}
+.cmp .r.now .bar div{background:var(--c0)}
+.cmp .val{text-align:right;font-size:15px;font-weight:600}
+.cmp .val small{display:block;font-weight:400;font-size:12px;color:var(--muted)}
+.up{color:var(--bad)}.down{color:var(--ok)}
+.chart{position:relative}
+.chart svg text{font-size:12px;fill:var(--muted);font-family:Inter,system-ui,sans-serif}
+.tip{position:absolute;pointer-events:none;background:var(--pop);border:1px solid var(--line);box-shadow:0 6px 20px rgba(0,0,0,.12);border-radius:8px;padding:6px 10px;font-size:12px;white-space:nowrap;opacity:0;z-index:2}
+.lev{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+.tile{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.tl{font-size:12px;color:var(--muted)}
+.tv{font-family:Fraunces,Georgia,serif;font-size:30px;margin-top:4px;font-variant-numeric:tabular-nums}
+.tn{font-size:12px;color:var(--muted);margin-top:4px}
+.gauge{margin-top:16px}
+.gtrack{position:relative;height:12px;border-radius:999px;background:linear-gradient(90deg,var(--c0),var(--grid) 50%,var(--c1))}
+.gdot{position:absolute;top:-5px;width:22px;height:22px;border-radius:50%;background:var(--panel);border:3px solid var(--fg);transform:translateX(-50%)}
+.glab{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-top:8px}
+.read{margin-top:14px;font-size:16px;max-width:70ch}
+.cmp2{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;margin-top:6px}
+.cmp2 th{text-align:right;font-weight:500;font-size:12px;color:var(--muted);padding:8px;border-bottom:1px solid var(--line);white-space:nowrap}
+.cmp2 td{text-align:right;padding:8px;border-bottom:1px solid var(--line);white-space:nowrap}
+.cmp2 th.l,.cmp2 td.l{text-align:left}
+.cmp2 tr.sel td{font-weight:600}
+.scroll{overflow-x:auto}
+.note{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
+.note p{margin:0 0 8px}.note p:last-child{margin:0}
+.cta{color:var(--c0);font-weight:600;text-decoration:none}
+details.how summary{cursor:pointer;font-weight:500}
+dl{margin:12px 0 0}dt{font-weight:500;margin-top:8px}dd{margin:2px 0 0;color:var(--muted)}
+footer{border-top:1px solid var(--line);padding-top:18px;font-size:12px;color:var(--muted);display:flex;flex-direction:column;gap:6px}
+footer strong{color:var(--fg);font-weight:600}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span>Laura Lake · Your Desert Real Estate Partner</span><span>Buying Power</span></div>
+    <h1>What a home really costs each month</h1>
+    <p class="for" id="for" hidden></p>
+    <p class="lede" id="lede">—</p>
+    <p class="meta" id="meta">—</p>
+  </header>
+
+  <section id="calculator">
+    <h2>Your monthly payment</h2>
+    <p class="sub">Move the price and down payment to fit your search. The rate starts at this week's national average. Your own rate depends on your credit, loan type and lender. Every number here is an estimated average, not your final cost.</p>
+    <div class="calc">
+      <div class="card">
+        <div class="field">
+          <div class="flabel"><span>Home price</span><b id="v-price">—</b></div>
+          <input type="range" id="price" min="200000" max="3000000" step="5000" aria-label="Home price">
+        </div>
+        <div class="field">
+          <div class="flabel"><span>Down payment</span><b id="v-down">—</b></div>
+          <div class="seg" id="downs" role="group" aria-label="Down payment percent"></div>
+        </div>
+        <div class="field">
+          <div class="flabel"><span>City and home type</span></div>
+          <div class="seg" id="cities" role="group" aria-label="City"><button data-v="la-quinta">La Quinta</button><button data-v="palm-desert">Palm Desert</button></div>
+          <div class="seg" id="types" role="group" aria-label="Home type" style="margin-top:6px"><button data-v="home">Single family</button><button data-v="condo">Condo</button></div>
+        </div>
+        <div class="row2 field">
+          <div><div class="flabel"><span>Interest rate</span></div><div class="num"><input id="rate" type="number" step="0.01" min="1" max="15" inputmode="decimal" aria-label="Interest rate"><span>%</span></div></div>
+          <div><div class="flabel"><span>HOA dues per month</span></div><div class="num"><span>$</span><input id="hoa" type="number" step="10" min="0" inputmode="numeric" aria-label="HOA dues per month"></div></div>
+        </div>
+        <details class="more">
+          <summary>Taxes and insurance</summary>
+          <div class="row2">
+            <div><div class="flabel"><span>Property tax rate</span></div><div class="num"><input id="tax" type="number" step="0.05" min="0" max="5" inputmode="decimal" aria-label="Property tax rate"><span>%/yr</span></div></div>
+            <div><div class="flabel"><span>Home insurance per year</span></div><div class="num"><span>$</span><input id="ins" type="number" step="100" min="0" inputmode="numeric" aria-label="Home insurance per year"></div></div>
+          </div>
+          <p class="tsub">Property tax starts at 1.25%. That is the 1% base plus typical local bonds, rounded up a little to cover most areas. Some communities add Mello Roos or other assessments, so check the tax bill on any home you like.</p>
+        </details>
+      </div>
+      <div class="card">
+        <div class="tl">Estimated total each month</div>
+        <div class="total" id="total">—</div>
+        <div class="tsub" id="total-sub">—</div>
+        <div class="stack" id="stack" aria-hidden="true"></div>
+        <div class="legend" id="legend"></div>
+        <div class="cash" id="cash">—</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="rates">
+    <h2>The same home at different rates</h2>
+    <p class="sub" id="rates-sub">Principal and interest only, on the same loan. Taxes, insurance and HOA stay the same at any rate.</p>
+    <div class="card"><div class="cmp" id="cmp"></div></div>
+    <div class="note" style="margin-top:14px">
+      <p id="refi">—</p>
+    </div>
+  </section>
+
+  <section id="trend">
+    <h2>30 year rate over the last year</h2>
+    <p class="sub">Freddie Mac's weekly national average. Point at a week to see the rate.</p>
+    <div class="card"><div class="chart" id="rate-chart"></div></div>
+  </section>
+
+  <section id="leverage">
+    <h2>How much room you have to negotiate</h2>
+    <p class="sub" id="lev-sub">—</p>
+    <div class="lev" id="lev"></div>
+    <div class="card gauge">
+      <div class="tl">Altos Market Action Index</div>
+      <div class="gtrack"><div class="gdot" id="gdot"></div></div>
+      <div class="glab"><span>Buyer's advantage (below 30)</span><span>Seller's advantage (above 30)</span></div>
+      <p class="read" id="read">—</p>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <div class="tl" id="both-label">La Quinta and Palm Desert side by side</div>
+      <div class="scroll"><table class="cmp2" id="both"></table></div>
+    </div>
+  </section>
+
+  <section class="note">
+    <p><b>When we find the home you want to make an offer on,</b> I will look up its actual property tax bill, any Mello Roos or special assessments, and the HOA dues. That gives you a much closer estimate of your monthly payment and your cash to close before you sign anything.</p>
+    <p>Questions in the meantime? <a class="cta" href="tel:+17604648138">Call or text 760-464-8138</a> · <a class="cta" href="mailto:Laura@drepcv.com">Laura@drepcv.com</a></p>
+  </section>
+
+  <section>
+    <details class="how">
+      <summary>How these numbers work</summary>
+      <dl>
+        <dt>Interest rate</dt><dd>Freddie Mac's Primary Mortgage Market Survey, published each Thursday. It is the national average for a 30 year fixed loan with 20% down and strong credit. Jumbo loans, FHA, VA and lower credit scores can price differently.</dd>
+        <dt>Principal and interest</dt><dd>A standard 30 year fixed payment on the price minus your down payment.</dd>
+        <dt>Mortgage insurance</dt><dd>With less than 20% down, most loans add mortgage insurance. I estimate it at 0.5% of the loan a year. Yours could be higher or lower.</dd>
+        <dt>Property tax and insurance</dt><dd>Tax starts at 1.25% of the price a year. Insurance starts at 0.35% of the price a year. Both are estimates you can change above.</dd>
+        <dt>Escrow and closing costs</dt><dd>I estimate them at 6% of the price when you use a loan and 3% when you pay cash. That covers lender fees, escrow, title, prepaid taxes and insurance, and similar costs. Your lender and escrow officer give you the real figures.</dd>
+        <dt>Long run average</dt><dd id="lr-note">—</dd>
+        <dt>Negotiating room</dt><dd>Altos Research weekly reports for listings on the market now. Price cuts are the share of current listings that have reduced their price. Days on market is the median for current listings. The Market Action Index runs from buyer's advantage below 30 to seller's advantage above 30.</dd>
+      </dl>
+    </details>
+  </section>
+
+  <footer>
+    <span>Every number on this page is an estimated average for planning. Your actual costs will be set by your lender, escrow, the tax bill and the insurance quote on the home you choose. This is not a loan offer or a guarantee of terms. I am not a lender. Get a written quote from a licensed lender before you make an offer.</span>
+    <span id="foot-dates">—</span>
+    <span><strong>Laura Lake | DRE #01455311 | Brokered by LPT Realty</strong> · 73725 El Paseo, Ste 21B, Palm Desert, CA 92260 · Equal Housing Opportunity</span>
+  </footer>
+</div>
+<div class="tip" id="tip"></div>
+
+<script>
+const DATA = {"as_of":"2026-11-17","rates":[{"week":"2025-11-13","rate_30yr":"6.24"},{"week":"2026-03-05","rate_30yr":"6.0"},{"week":"2026-03-19","rate_30yr":"6.22"},{"week":"2026-04-30","rate_30yr":"6.3"},{"week":"2026-05-07","rate_30yr":"6.37"},{"week":"2026-06-18","rate_30yr":"6.47"},{"week":"2026-06-25","rate_30yr":"6.49"},{"week":"2026-07-16","rate_30yr":"6.55"},{"week":"2026-09-03","rate_30yr":"6.71"},{"week":"2026-10-22","rate_30yr":"7.32"},{"week":"2026-10-29","rate_30yr":"7.24"},{"week":"2026-11-05","rate_30yr":"7.18"},{"week":"2026-11-12","rate_30yr":"7.11"}],"altos":[{"city":"La Quinta","home_type":"Single family","report_date":"2026-11-17","median_list_price":"899000","median_new_listing_price":"1262500","price_per_sqft":"409","market_action_index":"28","market_action_index_last_month":"29","market_label":"Slight Buyer's Advantage","inventory":"348","avg_days_on_market":"115","median_days_on_market":"56","pct_price_decreased":"27","pct_price_increased":"1","pct_relisted":"14"},{"city":"Palm Desert","home_type":"Single family","report_date":"2026-11-17","median_list_price":"773800","median_new_listing_price":"1074950","price_per_sqft":"355","market_action_index":"32","market_action_index_last_month":"34","market_label":"Slight Seller's Advantage","inventory":"344","avg_days_on_market":"119","median_days_on_market":"56","pct_price_decreased":"29","pct_price_increased":"1","pct_relisted":"13"},{"city":"La Quinta","home_type":"Condo","report_date":"2026-11-17","median_list_price":"687500","median_new_listing_price":"907000","price_per_sqft":"383","market_action_index":"28","market_action_index_last_month":"30","market_label":"Slight Buyer's Advantage","inventory":"90","avg_days_on_market":"113","median_days_on_market":"84","pct_price_decreased":"27","pct_price_increased":"0","pct_relisted":"14"},{"city":"Palm Desert","home_type":"Condo","report_date":"2026-11-17","median_list_price":"469900","median_new_listing_price":"552450","price_per_sqft":"327","market_action_index":"27","market_action_index_last_month":"29","market_label":"Slight Buyer's Advantage","inventory":"425","avg_days_on_market":"129","median_days_on_market":"77","pct_price_decreased":"24","pct_price_increased":"1","pct_relisted":"19"}],"long_run":{"avg":7.7,"since":"1971","through":"February 2026","source":"Freddie Mac PMMS weekly 30 year fixed average, April 1971 to February 2026, as reported by The Mortgage Reports"}};
+const $ = (id) => document.getElementById(id);
+const money = (v) => '$' + Math.round(v).toLocaleString('en-US');
+const pct = (v, d) => (+v).toFixed(d === undefined ? 2 : d) + '%';
+const fdate = (s) => new Date(s + 'T12:00:00Z').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+const fshort = (s) => new Date(s + 'T12:00:00Z').toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' });
+
+const rates = DATA.rates.map((r) => ({ week: r.week, rate: +r.rate_30yr })).filter((r) => r.week && r.rate).sort((a, b) => (a.week < b.week ? -1 : 1));
+const latest = rates[rates.length - 1];
+const yearAgo = (() => { const t = new Date(latest.week + 'T12:00:00Z'); t.setUTCFullYear(t.getUTCFullYear() - 1); const tgt = t.toISOString().slice(0, 10); let best = rates[0]; rates.forEach((r) => { if (Math.abs(new Date(r.week) - new Date(tgt)) < Math.abs(new Date(best.week) - new Date(tgt))) best = r; }); return best; })();
+const low = rates.reduce((a, b) => (b.rate < a.rate ? b : a));
+const LR = DATA.long_run || null;
+const CITY = { 'la-quinta': 'La Quinta', 'palm-desert': 'Palm Desert' };
+const TYPE = { home: 'Single family', condo: 'Condo' };
+const DOWNS = [3.5, 5, 10, 15, 20, 25, 30, 100];
+const downLabel = (v) => (v >= 100 ? 'Cash' : pct(v, v % 1 ? 1 : 0));
+
+function altosRow(city, type) { return DATA.altos.find((r) => r.city === CITY[city] && r.home_type === TYPE[type]) || null; }
+
+// state from link
+const S = { price: null, down: 20, city: 'la-quinta', type: 'home', hoa: null, rate: null, tax: 1.25, ins: null, forName: '' };
+(function readHash() {
+  const h = new URLSearchParams(location.hash.replace(/^#/, ''));
+  const n = (k) => { const v = parseFloat(String(h.get(k) || '').replace(/[$,%\s]/g, '')); return Number.isFinite(v) ? v : null; };
+  if (h.get('city') && CITY[h.get('city')]) S.city = h.get('city');
+  if (h.get('type') && TYPE[h.get('type')]) S.type = h.get('type');
+  const p = n('price'); if (p) S.price = Math.min(3000000, Math.max(200000, Math.round(p / 5000) * 5000));
+  const d = /^cash$/i.test(h.get('down') || '') ? 100 : n('down'); if (d !== null && d >= 0 && d <= 100) S.down = d;
+  const hoa = n('hoa'); if (hoa !== null && hoa >= 0) S.hoa = hoa;
+  const rt = n('rate'); if (rt && rt > 0 && rt < 20) S.rate = rt;
+  const fr = (h.get('for') || '').replace(/[^A-Za-z0-9 .,'&-]/g, '').slice(0, 60); if (fr) S.forName = fr;
+})();
+if (!S.price) { const a = altosRow(S.city, S.type); S.price = a ? Math.round(+a.median_list_price / 5000) * 5000 : 750000; }
+if (S.hoa === null) S.hoa = S.type === 'condo' ? 450 : 0;
+if (S.rate === null) S.rate = latest.rate;
+if (S.ins === null) S.ins = Math.round(S.price * 0.0035 / 50) * 50;
+let insTouched = false;
+
+function writeHash() {
+  const p = new URLSearchParams();
+  p.set('price', S.price); p.set('down', S.down); p.set('city', S.city); p.set('type', S.type);
+  if (S.hoa) p.set('hoa', S.hoa);
+  if (S.forName) p.set('for', S.forName);
+  try { history.replaceState(null, '', '#' + p.toString()); } catch (e) {}
+}
+
+function pi(loan, rate) { const r = rate / 100 / 12, n = 360; if (r === 0) return loan / n; return loan * r / (1 - Math.pow(1 + r, -n)); }
+function parts() {
+  const down = S.price * S.down / 100, loan = S.price - down;
+  const p = pi(loan, S.rate), tax = S.price * S.tax / 100 / 12, ins = S.ins / 12, hoa = S.hoa, mi = S.down < 20 ? loan * 0.005 / 12 : 0;
+  const cash = loan <= 0, closing = S.price * (cash ? 0.03 : 0.06);
+  return { down, loan, p, tax, ins, hoa, mi, cash, closing, total: p + tax + ins + hoa + mi };
+}
+
+function seg(el, values, label, current, onPick) {
+  el.replaceChildren();
+  values.forEach((v) => { const b = document.createElement('button'); b.type = 'button'; b.textContent = label(v); b.setAttribute('aria-pressed', String(v === current)); b.addEventListener('click', () => onPick(v)); el.appendChild(b); });
+}
+function setPressed(el, v) { el.querySelectorAll('button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.v === v))); }
+
+function renderCalc() {
+  const x = parts();
+  $('v-price').textContent = money(S.price);
+  $('v-down').textContent = x.cash ? 'Cash purchase · ' + money(x.down) : pct(S.down, S.down % 1 ? 1 : 0) + ' · ' + money(x.down);
+  $('total').textContent = money(x.total);
+  $('total-sub').textContent = x.cash ? 'Cash purchase, no loan payment. Taxes, insurance and HOA only.' : 'At ' + pct(S.rate) + ' on a ' + money(x.loan) + ' loan, 30 year fixed. Estimated average.';
+  const items = [['Principal and interest', x.p, 'var(--c0)'], ['Property tax', x.tax, 'var(--c1)'], ['Home insurance', x.ins, 'var(--c2)'], ['HOA dues', x.hoa, 'var(--c3)'], ['Mortgage insurance', x.mi, 'var(--c4)']].filter((i) => i[1] > 0.5);
+  $('stack').replaceChildren(...items.map((i) => { const d = document.createElement('div'); d.style.width = (i[1] / x.total * 100) + '%'; d.style.background = i[2]; return d; }));
+  $('legend').replaceChildren(...items.map((i) => { const r = document.createElement('div'); r.className = 'li'; const a = document.createElement('span'); const sw = document.createElement('i'); sw.className = 'sw'; sw.style.background = i[2]; a.append(sw, document.createTextNode(i[0])); const b = document.createElement('span'); b.textContent = money(i[1]); r.append(a, b); return r; }));
+  $('cash').innerHTML = '';
+  $('cash').append(document.createTextNode('Cash to close: about '), Object.assign(document.createElement('b'), { textContent: money(x.down + x.closing) }), document.createTextNode(x.cash ? '. That is the price plus estimated escrow and closing costs of ' + money(x.closing) + ' (3% for a cash purchase).' : '. That is your ' + money(x.down) + ' down payment plus estimated escrow and closing costs of ' + money(x.closing) + ' (6% of the price with a loan).'));
+  $('lede').textContent = (x.cash ? 'A ' : 'At this week’s ' + pct(latest.rate) + ' average rate, a ') + money(S.price) + ' ' + (S.type === 'condo' ? 'condo' : 'home') + ' in ' + CITY[S.city] + (x.cash ? ' bought with cash runs about ' + money(x.total) + ' a month for ' + (S.hoa ? 'taxes, insurance and HOA.' : 'taxes and insurance.') : ' with ' + pct(S.down, S.down % 1 ? 1 : 0) + ' down runs about ' + money(x.total) + ' a month with taxes, insurance' + (S.hoa ? ', HOA' : '') + ' and everything in.') + ' These are estimated averages, not final costs.';
+  renderCompare(x);
+}
+
+function renderCompare(x) {
+  if (x.cash) { const m = document.createElement('p'); m.className = 'sub'; m.style.margin = '0'; m.textContent = 'You are paying cash, so the interest rate does not change your monthly cost. Pick a down payment above to compare rates on a loan.'; $('cmp').replaceChildren(m); $('refi').textContent = 'Paying cash gives you a strong offer and no loan approval to wait on. Escrow and closing costs run about 3% of the price for a cash purchase.'; return; }
+  const rows = [
+    { lab: 'Your rate', sub: S.rate === latest.rate ? 'This week’s average' : 'The rate you entered', rate: S.rate, now: true },
+    { lab: '1 point lower', sub: 'If rates fall or you buy down the rate', rate: Math.max(0.5, S.rate - 1) },
+    { lab: 'A year ago', sub: 'Week of ' + fdate(yearAgo.week), rate: yearAgo.rate },
+    { lab: 'This year’s low', sub: 'Week of ' + fdate(low.week), rate: low.rate },
+  ];
+  if (LR) rows.push({ lab: 'Long run average', sub: 'Since ' + LR.since, rate: +LR.avg });
+  const base = pi(x.loan, S.rate);
+  const max = Math.max(...rows.map((r) => pi(x.loan, r.rate)));
+  $('cmp').replaceChildren(...rows.map((r) => {
+    const v = pi(x.loan, r.rate), diff = v - base;
+    const el = document.createElement('div'); el.className = 'r' + (r.now ? ' now' : '');
+    const lab = document.createElement('div'); lab.className = 'lab'; lab.textContent = r.lab + ' · ' + pct(r.rate); const sm = document.createElement('small'); sm.textContent = r.sub; lab.appendChild(sm);
+    const bar = document.createElement('div'); bar.className = 'bar'; const f = document.createElement('div'); f.style.width = (v / max * 100) + '%'; bar.appendChild(f);
+    const val = document.createElement('div'); val.className = 'val'; val.textContent = money(v) + '/mo';
+    const d = document.createElement('small');
+    if (!r.now) { d.textContent = (diff < 0 ? money(-diff) + ' less' : money(diff) + ' more') + ' a month'; d.className = diff < 0 ? 'down' : 'up'; } else { d.textContent = 'Starting point'; }
+    val.appendChild(d);
+    el.append(lab, bar, val); return el;
+  }));
+  const save = base - pi(x.loan, Math.max(0.5, S.rate - 1));
+  $('refi').textContent = 'On this loan, each full point of rate is worth about ' + money(save) + ' a month, or ' + money(save * 12) + ' a year. A rate can be refinanced later if rates fall. A purchase price cannot be changed after closing. Refinancing has its own costs, so weigh it with a lender before you count on it.';
+}
+
+function renderChart() {
+  const el = $('rate-chart'); el.replaceChildren();
+  const W = Math.max(300, el.clientWidth || 600), H = 240, m = { t: 18, r: 14, b: 28, l: 44 };
+  const t0 = new Date(rates[0].week).getTime(), t1 = new Date(latest.week).getTime();
+  const lo = Math.floor(Math.min(...rates.map((r) => r.rate), LR ? +LR.avg : 99) * 2) / 2 - 0.25, hi = Math.ceil(Math.max(...rates.map((r) => r.rate), LR ? +LR.avg : 0) * 2) / 2 + 0.25;
+  const X = (w) => m.l + (new Date(w).getTime() - t0) / Math.max(1, t1 - t0) * (W - m.l - m.r);
+  const Y = (v) => m.t + (hi - v) / (hi - lo) * (H - m.t - m.b);
+  const ns = 'http://www.w3.org/2000/svg';
+  const svg = document.createElementNS(ns, 'svg'); svg.setAttribute('width', '100%'); svg.setAttribute('height', H); svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H); svg.setAttribute('role', 'img'); svg.setAttribute('aria-label', '30 year mortgage rate by week over the last year');
+  const mk = (tag, attrs, text) => { const e = document.createElementNS(ns, tag); Object.entries(attrs).forEach(([k, v]) => e.setAttribute(k, v)); if (text !== undefined) e.textContent = text; svg.appendChild(e); return e; };
+  for (let v = Math.ceil(lo * 2) / 2; v <= hi; v += 0.5) { mk('line', { x1: m.l, x2: W - m.r, y1: Y(v), y2: Y(v), stroke: 'var(--grid)' }); mk('text', { x: m.l - 8, y: Y(v) + 4, 'text-anchor': 'end' }, v.toFixed(1) + '%'); }
+  if (LR) { mk('line', { x1: m.l, x2: W - m.r, y1: Y(+LR.avg), y2: Y(+LR.avg), stroke: 'var(--c1)', 'stroke-dasharray': '5 4' }); mk('text', { x: W - m.r, y: Y(+LR.avg) - 6, 'text-anchor': 'end' }, 'Long run average ' + pct(+LR.avg)); }
+  const months = []; const d = new Date(rates[0].week + 'T12:00:00Z'); d.setUTCDate(1); d.setUTCMonth(d.getUTCMonth() + 1);
+  while (d.getTime() <= t1) { months.push(d.toISOString().slice(0, 10)); d.setUTCMonth(d.getUTCMonth() + 2); }
+  months.forEach((w) => mk('text', { x: X(w), y: H - 8, 'text-anchor': 'middle' }, new Date(w + 'T12:00:00Z').toLocaleDateString('en-US', { month: 'short', timeZone: 'UTC' })));
+  mk('path', { d: rates.map((r, i) => (i ? 'L' : 'M') + X(r.week).toFixed(1) + ',' + Y(r.rate).toFixed(1)).join(''), fill: 'none', stroke: 'var(--c0)', 'stroke-width': 2.5, 'stroke-linejoin': 'round' });
+  rates.forEach((r) => mk('circle', { cx: X(r.week), cy: Y(r.rate), r: r === latest ? 5 : 3, fill: r === latest ? 'var(--c0)' : 'var(--panel)', stroke: 'var(--c0)', 'stroke-width': 2 }));
+  mk('text', { x: X(latest.week), y: Y(latest.rate) + 22, 'text-anchor': 'end', style: 'fill:var(--fg);font-weight:600' }, pct(latest.rate));
+  el.appendChild(svg);
+  const tip = $('tip');
+  svg.addEventListener('pointermove', (e) => {
+    const b = svg.getBoundingClientRect(); const px = (e.clientX - b.left) / b.width * W;
+    let best = rates[0]; rates.forEach((r) => { if (Math.abs(X(r.week) - px) < Math.abs(X(best.week) - px)) best = r; });
+    tip.textContent = 'Week of ' + fdate(best.week) + ': ' + pct(best.rate); tip.style.opacity = '1';
+    tip.style.left = Math.min(window.innerWidth - tip.offsetWidth - 8, e.pageX + 12) + 'px'; tip.style.top = (e.pageY - 36) + 'px';
+  });
+  svg.addEventListener('pointerleave', () => { tip.style.opacity = '0'; });
+}
+
+function renderLeverage() {
+  const a = altosRow(S.city, S.type); const typeWord = S.type === 'condo' ? 'condos' : 'single family homes';
+  if (!a) { $('lev').textContent = 'No Altos report for this city and home type yet.'; return; }
+  $('lev-sub').textContent = CITY[S.city] + ' ' + typeWord + ' on the market now, from the Altos Research report for the week of ' + fdate(a.report_date) + '.';
+  const tiles = [
+    ['Listings with a price cut', pct(a.pct_price_decreased, 0), 'Share of current listings that reduced their price'],
+    ['Median days on market', a.median_days_on_market, 'For homes listed now'],
+    ['Homes for sale', (+a.inventory).toLocaleString('en-US'), 'Current inventory'],
+    ['Median list price', money(+a.median_list_price), money(+a.price_per_sqft) + ' per square foot'],
+  ];
+  $('lev').replaceChildren(...tiles.map((t) => { const d = document.createElement('div'); d.className = 'tile'; d.innerHTML = '<div class="tl"></div><div class="tv"></div><div class="tn"></div>'; d.children[0].textContent = t[0]; d.children[1].textContent = t[1]; d.children[2].textContent = t[2]; return d; }));
+  const mai = +a.market_action_index; const pos = Math.max(0, Math.min(100, (mai - 15) / 30 * 100));
+  $('gdot').style.left = pos + '%';
+  const cuts = +a.pct_price_decreased, dom = +a.median_days_on_market;
+  let read = CITY[S.city] + ' ' + typeWord + ' score ' + mai + ', ' + String(a.market_label || '').replace(/'/g, '’').toLowerCase() + '. ';
+  if (mai < 30) read += 'About ' + Math.round(cuts) + ' in 100 listings have already cut their price, and the typical home has sat ' + dom + ' days. Sellers here expect to negotiate. Asking for a credit or a lower price is reasonable on the right home.';
+  else read += 'About ' + Math.round(cuts) + ' in 100 listings have cut their price, and the typical home has sat ' + dom + ' days. Well priced homes still move, so the room to negotiate depends on the home. Homes that have sat longest give you the most room.';
+  $('read').textContent = read;
+  $('both-label').textContent = 'La Quinta and Palm Desert ' + typeWord + ' side by side';
+  const rows = ['la-quinta', 'palm-desert'].map((c) => ({ c, r: altosRow(c, S.type) })).filter((x) => x.r);
+  const tb = $('both'); tb.innerHTML = '<thead><tr><th class="l">City</th><th>Median list price</th><th>Price cuts</th><th>Days on market</th><th>Homes for sale</th><th>Market Action Index</th></tr></thead>';
+  const body = document.createElement('tbody');
+  rows.forEach(({ c, r }) => { const tr = document.createElement('tr'); if (c === S.city) tr.className = 'sel'; [CITY[c], money(+r.median_list_price), pct(r.pct_price_decreased, 0), r.median_days_on_market, (+r.inventory).toLocaleString('en-US'), r.market_action_index + ' · ' + r.market_label].forEach((v, i) => { const td = document.createElement('td'); if (!i) td.className = 'l'; td.textContent = v; tr.appendChild(td); }); body.appendChild(tr); });
+  tb.appendChild(body);
+}
+
+function renderAll() { renderCalc(); renderLeverage(); writeHash(); }
+
+// wire up
+$('price').value = S.price; $('rate').value = S.rate; $('hoa').value = S.hoa; $('tax').value = S.tax; $('ins').value = S.ins;
+if (S.forName) { $('for').hidden = false; $('for').textContent = 'Prepared for ' + S.forName; }
+const downList = DOWNS.indexOf(S.down) < 0 ? DOWNS.concat([S.down]).sort((a, b) => a - b) : DOWNS;
+function drawDowns() { seg($('downs'), downList, downLabel, S.down, (v) => { S.down = v; drawDowns(); renderAll(); }); }
+drawDowns();
+setPressed($('cities'), S.city); setPressed($('types'), S.type);
+$('cities').addEventListener('click', (e) => { const b = e.target.closest('button'); if (!b) return; S.city = b.dataset.v; setPressed($('cities'), S.city); renderAll(); });
+$('types').addEventListener('click', (e) => { const b = e.target.closest('button'); if (!b) return; const was = S.type; S.type = b.dataset.v; setPressed($('types'), S.type); if (was !== S.type && ((S.type === 'condo' && S.hoa === 0) || (S.type === 'home' && S.hoa === 450))) { S.hoa = S.type === 'condo' ? 450 : 0; $('hoa').value = S.hoa; } renderAll(); });
+$('price').addEventListener('input', () => { S.price = +$('price').value; if (!insTouched) { S.ins = Math.round(S.price * 0.0035 / 50) * 50; $('ins').value = S.ins; } renderAll(); });
+const numIn = (id, key, min, max) => $(id).addEventListener('input', () => { const v = parseFloat($(id).value); if (Number.isFinite(v) && v >= min && v <= max) { S[key] = v; if (id === 'ins') insTouched = true; renderAll(); } });
+numIn('rate', 'rate', 0.5, 20); numIn('hoa', 'hoa', 0, 10000); numIn('tax', 'tax', 0, 5); numIn('ins', 'ins', 0, 100000);
+
+$('meta').textContent = 'Rate: Freddie Mac weekly average, ' + fdate(latest.week) + '. Market numbers: Altos Research, week of ' + fdate((DATA.altos[0] || {}).report_date || latest.week) + '. Updated ' + fdate(DATA.as_of) + '.';
+$('lr-note').textContent = LR ? 'Freddie Mac’s 30 year rate has averaged about ' + pct(+LR.avg) + ' since ' + LR.since + ' (through ' + LR.through + ').' : '';
+$('foot-dates').textContent = 'Rates from Freddie Mac’s Primary Mortgage Market Survey. Market data from Altos Research. Updated ' + fdate(DATA.as_of) + '.';
+renderAll(); renderChart();
+let rt; window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(renderChart, 150); });
+</script>
+</body>
+</html>
